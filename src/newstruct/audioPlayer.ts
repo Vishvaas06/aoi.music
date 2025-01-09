@@ -282,7 +282,7 @@ export class AudioPlayer {
                         ...info[i],
                         requester: member,
                         position: this.queue.length,
-                        thumbnail: moreinfo.coverArt ? moreinfo.coverArt.sources[0].url : null,
+                        thumbnail: moreinfo.visualIdentity ? moreinfo.visualIdentity.image[2].url : null,
                         createdAt: new Date(moreinfo.releaseDate.isoString) ?? null
                     });
                     this.options.manager.emit(PlayerEvents.TrackAdd, <YoutubeTrackInfo | SpotifyTrackInfo>(<unknown>info), this);
